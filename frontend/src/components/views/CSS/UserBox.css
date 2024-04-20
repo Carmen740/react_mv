@@ -1,0 +1,33 @@
+.UserProfile {
+    background-color: #ffffff;
+    color: darkblue;
+    font-weight: 500;
+    font-style: italic;
+    border-radius: 100px 444px 0px 100px;
+    user-select: none;
+}
+.auth {
+    margin-left: 10px;
+    text-decoration: none;
+
+    & .auth_but {
+        cursor: pointer;
+        font-weight: 400;
+        margin-top: 7px;
+        margin-left: 50px;
+        font-size: 24px;
+        padding: 14px 5px;
+        border: 1px solid #0c3f6e;
+        background-color: #aae9ff;
+        color: #08088a;
+        border-radius: 5px 5px 0px 5px;
+        transition: 0.3s;
+
+        &:hover {
+            border-radius: 10px;
+            color: #ffffff;
+            border: 1px solid #033360;
+            background-color: #3c9cc1;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.MessageBox {
+    background-color: white;
+    & h2 {
+        color:#06b3ff;
+        font-size:30px ;
+    }
+}
+#send {
+    cursor: pointer;
+    color: #d6f4ff;
+    padding: 4px 4px;
+    background: #3767b7;
+    border: 1px solid #3767b7;
+    border-radius: 3px;
+    margin-top: 15px ;
+    font-size: 24px;
+
+    &:hover {
+        background: #2b5396;
+        color: #ffffff;
+    }
+}

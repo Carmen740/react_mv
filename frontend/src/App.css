@@ -1,3 +1,10 @@
-.App {
-  text-align: center;
+*,*:after,*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.app-wrapper {
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
 }
