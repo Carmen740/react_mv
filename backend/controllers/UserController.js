@@ -67,7 +67,7 @@ export const login = async (req, res) => {
     if (user.password !== password) {
         return res.status(400).json({ message: 'Неверный логин или пароль!' })
     }
-    const jwtToken = generateAccessToken(user._id, user.login, user.email)
+    const jwtToken = generateAccessToken(user._id, user.login, user.email,user.role)
 if (user.role === "admin") {
     res.json({
         message: 'Добро пожаловать админ',
