@@ -21,6 +21,7 @@ const AdminPanel = ({setModalBox}) => {
                 'content-Type': 'application/json',
             },
         }).then(res => res.json())
+    }
 //CALC2 =======================================================
     const [calc2, setCalc2] = useState([]);
     useEffect(() => {
@@ -47,19 +48,18 @@ const AdminPanel = ({setModalBox}) => {
                 'content-Type': 'application/json',
             },
         }).then(res => res.json())
+    }
     // CALC3==============================================================
     const [calc3, setCalc3] = useState([]);
     useEffect(() => {
-        getAllCalc3()
-    },[])
-const getAllCalc3 = () => {
-    const api = 'http://localhost:1231/car-loan';
+        const api = 'http://localhost:1231/car-loan';
 
-    fetch(api, {
-        method: 'GET',
-    })
-        .then((calc3) => calc3.json())
-};
+        fetch(api, {
+            method: 'GET',
+        })
+            .then((calc3) => calc3.json())
+            .then((calc3) => {setCalc3(calc3.data)})
+    },[])
 
 // Удаление calc3
     const delCalc3 = async (id)  => {
@@ -70,6 +70,7 @@ const getAllCalc3 = () => {
                 'content-Type': 'application/json',
             },
         }).then(res => res.json())
+    }
 
 
 
