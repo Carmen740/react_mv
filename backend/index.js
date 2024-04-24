@@ -30,6 +30,10 @@ app.post('/addCalc/mortgage',CalculatorController.addCalcMortgage)
 app.post('/addCalc/car-loan',CalculatorController.addCalcCarLoan)
 app.post('/addCalc/consumer',CalculatorController.addCalcConsumer)
 
+// Удаление калькулятора
+app.delete('/del/consumer/:_id',CalculatorController.delCalc1)
+app.delete('/del/mortgage/:_id',CalculatorController.delCalc2)
+app.delete('/del/car-loan/:_id',CalculatorController.delCalc3)
 
 // Подключение БД и сервера
 async function start(){

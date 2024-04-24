@@ -13,17 +13,40 @@ const AdminPanel = ({setModalBox}) => {
                 setCalc1(calc1.data);
             });
     }, []);
+    const delCalc1 = async (id)  => {
+        const api = `http://localhost:1231/del/consumer/${id}`;
+        fetch(api, {
+            method: 'DELETE',
+            headers: {
+                'content-Type': 'application/json',
+            },
+        }).then(res => res.json())
 //CALC2 =======================================================
     const [calc2, setCalc2] = useState([]);
     useEffect(() => {
         const api = 'http://localhost:1231/mortgage';
 
-        fetch(api)
+        fetch(api,
+            {
+                method: 'GET',
+                headers: {
+                    'content-Type': 'application/json',
+                },
+            })
             .then((calc2) => calc2.json())
             .then((calc2) => {
                 setCalc2(calc2.data);
             });
     }, []);
+    // Удаление Calc2
+    const delCalc2 = async (id)  => {
+        const api = `http://localhost:1231/del/mortgage/${id}`;
+        fetch(api, {
+            method: 'DELETE',
+            headers: {
+                'content-Type': 'application/json',
+            },
+        }).then(res => res.json())
     // CALC3==============================================================
     const [calc3, setCalc3] = useState([]);
     useEffect(() => {
@@ -36,10 +59,19 @@ const getAllCalc3 = () => {
         method: 'GET',
     })
         .then((calc3) => calc3.json())
-        .then((calc3) => {
-            setCalc3(calc3.data);
-        });
 };
+
+// Удаление calc3
+    const delCalc3 = async (id)  => {
+        const api = `http://localhost:1231/del/car-loan/${id}`;
+        fetch(api, {
+            method: 'DELETE',
+            headers: {
+                'content-Type': 'application/json',
+            },
+        }).then(res => res.json())
+
+
 
     return (
         <>
@@ -67,6 +99,7 @@ const getAllCalc3 = () => {
                                     <tr key={calc._id}>
                                         <td>{calc.name}</td>
                                         <td>{calc.rate}</td>
+                                        <td className={'del'} onClick={() => delCalc1(calc._id)}>Удалить</td>
                                     </tr>
                                 );
                             })
@@ -95,6 +128,7 @@ const getAllCalc3 = () => {
                                     <tr key={calc._id}>
                                         <td>{calc.name}</td>
                                         <td>{calc.rate}</td>
+                                        <td className={'del'} onClick={() => delCalc2(calc._id)}>Удалить</td>
                                     </tr>
                                 );
                             })
@@ -113,7 +147,7 @@ const getAllCalc3 = () => {
                                 <th>name</th>
                                 <th>rate</th>
                                 <th>
-                                    <button className={'add'} onClick={() => setModalBox('AddCalcBoxCS')}>Добавить</button>
+                                    <button className={'add'} onClick={() => setModalBox('AddCalcBoxCL')}>Добавить</button>
                                 </th>
                             </tr>
                             </thead>
@@ -123,6 +157,9 @@ const getAllCalc3 = () => {
                                     <tr key={calc._id}>
                                         <td>{calc.name}</td>
                                         <td>{calc.rate}</td>
+                                        <td>
+                                            <button className={"del"} onClick={() => delCalc3(calc._id)}>Удалить</button>
+                                        </td>
                                     </tr>
                                 );
                             })

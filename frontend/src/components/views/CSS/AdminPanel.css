@@ -14,7 +14,6 @@
         padding-right: 10px;
         font-size: 17px;
         font-weight: 470;
-        cursor: default;
         width: 100%;
     }
     & th {
@@ -38,6 +37,7 @@
 
 .add {
     background: #bde9f6;
+    margin-bottom: 10px;
     color: #0f2235;
     padding: 10px;
     font-size: 17px;
@@ -51,4 +51,20 @@
          background-color: #71ffff;
          border-radius: 20px;
      }
+}
+.del {
+    background: #883434;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    font-weight: 600;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: border-radius 0.3s,background-color 1s ease;
+    &:hover {
+        background-color: #ff7171;
+        border-radius: 20px;
+    }
 }

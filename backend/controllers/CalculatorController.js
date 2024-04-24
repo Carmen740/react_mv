@@ -128,3 +128,40 @@ export const addCalcConsumer = async (req, res) => {
         message: 'Калькулятор добавлен'
     })
 }
+// DEL CONSUMER
+export const delCalc1 = async (req, res) => {
+    try{
+        let calculator = await Consumer.deleteOne(req.params)
+        res.send(calculator)
+
+
+    }catch(err){
+        console.log(err)
+    }
+}
+
+
+//DEL MORTGAGE
+export const delCalc2 = async (req, res) => {
+    try{
+        let calculator = await Mortgage.deleteOne(req.params)
+        res.send(calculator)
+
+
+    }catch(err){
+        new Error(err);
+    }
+}
+
+
+// DEL CARLOAN
+export const delCalc3 = async (req, res) => {
+    try{
+        let calculator = await CarLoan.deleteOne(req.params)
+        res.send(calculator)
+
+
+    }catch(err){
+        new Error(err);
+    }
+}
