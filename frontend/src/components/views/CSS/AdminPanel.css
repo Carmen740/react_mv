@@ -41,7 +41,7 @@
     color: #0f2235;
     padding: 10px;
     font-size: 17px;
-    border: none;
+    border: 1px solid cyan;
     font-weight: 600;
     margin-top: 5px;
     cursor: pointer;
@@ -54,10 +54,10 @@
 }
 .del {
     background: #883434;
+    border: 1px solid cyan;
     color: #ffffff;
     padding: 10px;
     font-size: 17px;
-    border: none;
     font-weight: 600;
     margin-top: 5px;
     cursor: pointer;

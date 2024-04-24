@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './CSS/AdminPanel.css';
 
-const AdminPanel = ({setModalBox}) => {
+const AdminPanel = ({setModalBox,setPage}) => {
     // CALC1========================================================
     const [calc1, setCalc1] = useState([]);
     useEffect(() => {
@@ -21,6 +21,10 @@ const AdminPanel = ({setModalBox}) => {
                 'content-Type': 'application/json',
             },
         }).then(res => res.json())
+            .then(() => {
+                alert("Калькулятор удален")
+                window.location.reload();
+            });
     }
 //CALC2 =======================================================
     const [calc2, setCalc2] = useState([]);
@@ -48,6 +52,10 @@ const AdminPanel = ({setModalBox}) => {
                 'content-Type': 'application/json',
             },
         }).then(res => res.json())
+            .then(() => {
+                alert("Калькулятор удален")
+                window.location.reload();
+            });
     }
     // CALC3==============================================================
     const [calc3, setCalc3] = useState([]);
@@ -70,6 +78,11 @@ const AdminPanel = ({setModalBox}) => {
                 'content-Type': 'application/json',
             },
         }).then(res => res.json())
+            .then(() => {
+                alert("Калькулятор удален")
+                window.location.reload();
+            });
+
     }
 
 
@@ -100,7 +113,7 @@ const AdminPanel = ({setModalBox}) => {
                                     <tr key={calc._id}>
                                         <td>{calc.name}</td>
                                         <td>{calc.rate}</td>
-                                        <td className={'del'} onClick={() => delCalc1(calc._id)}>Удалить</td>
+                                        <td> <button className={'del'} onClick={() => delCalc1(calc._id)}>Удалить</button></td>
                                     </tr>
                                 );
                             })
@@ -129,7 +142,7 @@ const AdminPanel = ({setModalBox}) => {
                                     <tr key={calc._id}>
                                         <td>{calc.name}</td>
                                         <td>{calc.rate}</td>
-                                        <td className={'del'} onClick={() => delCalc2(calc._id)}>Удалить</td>
+                                        <td><button className={'del'} onClick={() => delCalc2(calc._id)}>Удалить</button></td>
                                     </tr>
                                 );
                             })
