@@ -13,6 +13,7 @@ import ConsumerCalc from './components/pages/ConsumerCalc';
 import  AddCalcBoxM from './components/pages/AddCalc/AddCalcBoxM';
 import  AddCalcBoxCL from './components/pages/AddCalc/AddCalcBoxCL';
 import  AddCalcBoxCS from './components/pages/AddCalc/AddCalcBoxCS';
+import AdminPanel from './components/views/AdminPanel';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         MortgageCalc: <MortgageCalc  setMessage={setMessage} setModalBox={setModalBox} token={token} />,
         CarLoanCalc: <CarLoanCalc  setMessage={setMessage} setModalBox={setModalBox} token={token} />,
         ConsumerCalc: <ConsumerCalc  setMessage={setMessage} setModalBox={setModalBox} token={token} />,
+        AdminPanel: <AdminPanel setModalBox={setModalBox} setMessage={setMessage} token={token} />,
     }
     return (
         <div className={'app-wrapper'}>

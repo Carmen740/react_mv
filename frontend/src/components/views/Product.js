@@ -7,7 +7,7 @@ function Product({ id, name,rate, token}) {
     const calc = {
         id: id,
         name: name,
-        rate:rate
+        rate:rate,
     }
     const monthlyRate = rate / 12 / 100;
 

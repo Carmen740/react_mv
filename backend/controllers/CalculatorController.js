@@ -68,7 +68,6 @@ export const calculatorConsumer = async (req, res) => {
 export const addCalcMortgage = async (req, res) => {
     const { name, rate } = req.body
     const calculator = new Mortgage({ name, rate })
-
     try {
         await calculator.save()
     } catch (err) {
@@ -129,5 +128,3 @@ export const addCalcConsumer = async (req, res) => {
         message: 'Калькулятор добавлен'
     })
 }
-
-
