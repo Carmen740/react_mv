@@ -98,7 +98,7 @@ const AdminPanel = ({setModalBox}) => {
                         <table>
                             <thead>
                             <tr>
-                                <td colSpan={2}><h2>Потреб. к.</h2></td>
+                                <td colSpan={5}><h2>Потреб. к.</h2></td>
                             </tr>
                             <tr>
                                 <th>name</th>
@@ -127,7 +127,7 @@ const AdminPanel = ({setModalBox}) => {
                         <table>
                             <thead>
                             <tr>
-                                <td colSpan={2}><h2>Ипот. к.</h2></td>
+                                <td colSpan={5}><h2>Ипот. к.</h2></td>
                             </tr>
                             <tr>
                                 <th>name</th>
@@ -156,7 +156,7 @@ const AdminPanel = ({setModalBox}) => {
                         <table>
                             <thead>
                             <tr>
-                                <td colSpan={2}><h2>Автокр. к.</h2></td>
+                                <td colSpan={5}><h2>Автокр. к.</h2></td>
                             </tr>
                             <tr>
                                 <th>name</th>
