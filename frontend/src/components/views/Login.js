@@ -13,7 +13,7 @@ const Error = document.getElementById('Error')
             Error.innerHTML = "Неверный логин или пароль"
             return
         }
-        const api = 'http://localhost:1231/login'
+        const api = 'http://localhost:1200/login'
         fetch(api, {
             method: 'POST',
             headers: {

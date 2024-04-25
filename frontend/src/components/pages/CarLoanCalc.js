@@ -10,7 +10,7 @@ const CarLoanCalc = ({token, setModalBox,setMessage}) => {
         getAllCalc()
     }, [])
     const getAllCalc = () => {
-        const api = 'http://localhost:1231/car-loan'
+        const api = 'http://localhost:1200/car-loan'
         fetch(api)
             .then((result) => result.json())
             .then((result) => {

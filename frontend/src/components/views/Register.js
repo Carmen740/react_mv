@@ -26,7 +26,7 @@ let message
         }
 
 
-        const api = 'http://localhost:1231/register'
+        const api = 'http://localhost:1200/register'
 
         fetch(api, {
             method: 'POST',

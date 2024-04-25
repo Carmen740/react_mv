@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './CSS/AdminPanel.css';
 
-const AdminPanel = ({setModalBox,setPage}) => {
+const AdminPanel = ({setModalBox}) => {
     // CALC1========================================================
     const [calc1, setCalc1] = useState([]);
     useEffect(() => {
-        const api = 'http://localhost:1231/consumer';
+        const api = 'http://localhost:1200/consumer';
 
         fetch(api)
             .then((calc1) => calc1.json())
@@ -13,8 +13,9 @@ const AdminPanel = ({setModalBox,setPage}) => {
                 setCalc1(calc1.data);
             });
     }, []);
+    // Удаление calc1
     const delCalc1 = async (id)  => {
-        const api = `http://localhost:1231/del/consumer/${id}`;
+        const api = `http://localhost:1200/del/consumer/${id}`;
         fetch(api, {
             method: 'DELETE',
             headers: {
@@ -29,7 +30,7 @@ const AdminPanel = ({setModalBox,setPage}) => {
 //CALC2 =======================================================
     const [calc2, setCalc2] = useState([]);
     useEffect(() => {
-        const api = 'http://localhost:1231/mortgage';
+        const api = 'http://localhost:1200/mortgage';
 
         fetch(api,
             {
@@ -45,7 +46,7 @@ const AdminPanel = ({setModalBox,setPage}) => {
     }, []);
     // Удаление Calc2
     const delCalc2 = async (id)  => {
-        const api = `http://localhost:1231/del/mortgage/${id}`;
+        const api = `http://localhost:1200/del/mortgage/${id}`;
         fetch(api, {
             method: 'DELETE',
             headers: {
@@ -60,7 +61,7 @@ const AdminPanel = ({setModalBox,setPage}) => {
     // CALC3==============================================================
     const [calc3, setCalc3] = useState([]);
     useEffect(() => {
-        const api = 'http://localhost:1231/car-loan';
+        const api = 'http://localhost:1200/car-loan';
 
         fetch(api, {
             method: 'GET',
@@ -71,7 +72,7 @@ const AdminPanel = ({setModalBox,setPage}) => {
 
 // Удаление calc3
     const delCalc3 = async (id)  => {
-        const api = `http://localhost:1231/del/car-loan/${id}`;
+        const api = `http://localhost:1200/del/car-loan/${id}`;
         fetch(api, {
             method: 'DELETE',
             headers: {

@@ -18,7 +18,7 @@ function AddCalcBoxCL  ({ setModalBox, setMessage }) {
 
         // console.debug(data)
 
-        const api = 'http://localhost:1231/addCalc/car-loan'
+        const api = 'http://localhost:1200/addCalc/car-loan'
 
         fetch(api, {
             method: 'POST',

@@ -7,7 +7,7 @@ const MortgageCalc = ({setModalBox,token,setMessage}) => {
     const [calculators, setProducts] = useState([])
 
     useEffect(() => {
-        const api = 'http://localhost:1231/mortgage'
+        const api = 'http://localhost:1200/mortgage'
 
         fetch(api)
             .then((result) => result.json())

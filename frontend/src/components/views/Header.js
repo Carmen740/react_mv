@@ -1,8 +1,6 @@
 import React from 'react';
 import './CSS/Header.css';
 import UserBox from './UserBox';
-import {jwtDecode} from 'jwt-decode'
-import login from './Login';
 
 const Header = ({setPage, setModalBox, token, setToken}) => {
     function Calc () {
@@ -16,17 +14,6 @@ const Header = ({setPage, setModalBox, token, setToken}) => {
             </>)
         }
     }
-    function AdminPanel () {
-    const role = jwtDecode(token).role
-     if (role === 'admin') {
-            return(
-                <>
-                    <button onClick={() => setPage('AdminPanel')} className={'menu__link'}>Панель админа</button>
-                </>
-            )
-        }
-    }
-
     return (
         <header>
             <nav className="menu">
@@ -34,10 +21,7 @@ const Header = ({setPage, setModalBox, token, setToken}) => {
                     <h3>LO<span>GO</span></h3>
                 </div>
                 <Calc/>
-                <AdminPanel />
-                <div className="auth">
-                    <UserBox token={token} setToken={setToken} setModalBox={setModalBox} />
-                </div>
+                    <UserBox token={token} setToken={setToken} setPage={setPage} setModalBox={setModalBox} />
             </nav>
         </header>
     );

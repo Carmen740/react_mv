@@ -16,7 +16,7 @@ import './AddCalc.css'
 
         // console.debug(data)
 
-        const api = 'http://localhost:1231/addCalc/mortgage'
+        const api = 'http://localhost:1200/addCalc/mortgage'
 
         fetch(api, {
             method: 'POST',

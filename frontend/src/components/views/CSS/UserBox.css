@@ -6,11 +6,9 @@
     border-radius: 100px 444px 0px 100px;
     user-select: none;
 }
-.auth {
-    margin-left: 10px;
-    text-decoration: none;
 
-    & .auth_but {
+
+    .auth_but {
         cursor: pointer;
         font-weight: 400;
         margin-top: 7px;
@@ -30,4 +28,3 @@
             background-color: #3c9cc1;
         }
     }
-}

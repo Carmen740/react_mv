@@ -5,7 +5,7 @@ const ConsumerCalc = ({token,setModalBox,setMessage}) => {
     const [calculators, setProducts] = useState([])
 
     useEffect(() => {
-        const api = 'http://localhost:1231/consumer'
+        const api = 'http://localhost:1200/consumer'
 
         fetch(api)
             .then((result) => result.json())
